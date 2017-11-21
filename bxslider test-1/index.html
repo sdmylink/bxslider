@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bxslider</title>
+    <!--    <link rel="stylesheet" href="css/jquery.bxslider.min.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--   <script src="js/jquery.bxslider.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+
+        @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600|Poiret+One');
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+        }
+
+        img {
+            display: block;
+            overflow: hidden;
+        }
+
+        .spacer {
+            clear: both;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            display: block;
+        }
+
+        input::-webkit-input-placeholder {
+            opacity: 1;
+        }
+
+        input::-moz-placeholder {
+            opacity: 1;
+        }
+
+        input:-ms-input-placeholder {
+            opacity: 1;
+        }
+
+        textarea::-webkit-input-placeholder {
+            opacity: 1;
+        }
+
+        textarea::-moz-placeholder {
+            opacity: 1;
+        }
+
+        textarea:-ms-input-placeholder {
+            opacity: 1;
+        }
+
+        body {
+            font-family: 'Poiret One', cursive;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+
+        .container {
+            display: block;
+            margin: 0 auto;
+            width: 1170px;
+        }
+
+        .banner {
+            height: 100vh;
+            display: block;
+        }
+
+        .slider .slider_content {
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            /*            background-repeat: no-repeat;*/
+            /*            background-attachment: fixed;*/
+        }
+
+        .bx-wrapper {
+            position: relative;
+            margin-bottom: 60px;
+            padding: 0;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+            -moz-box-shadow: 0;
+            -webkit-box-shadow: 0;
+            box-shadow: 0;
+            border: none;
+            background: none;
+        }
+
+        .bannercaption {
+            height: 100%;
+            width: 100%;
+            display: table;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .bannercaption_text {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .bannercaption_text h2 {
+            font-size: 50px;
+            display: block;
+            line-height: 55px;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .bannercaption_text p {
+            font-size: 30px;
+            line-height: 35px;
+            display: block;
+            color: #fff;
+            padding-top: 20px;
+            font-weight: 100;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .bx-wrapper .bx-controls-direction a {
+            position: absolute;
+            top: 50%;
+            margin-top: 0px;
+            outline: 0;
+            width: 50px;
+            height: 50px;
+            text-indent: -9999px;
+            z-index: 9999;
+            background-color: rgba(51,51,51,0.2);
+            
+        }
+        .bx-wrapper .bx-controls-direction a:hover,
+         .bx-wrapper .bx-controls-direction a:focus{
+              background-color: rgba(51,51,51,0.5);
+        }
+        .bx-wrapper .bx-prev {
+            left: 0px;
+            background: url(images/if_previous_308957_255_1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .bx-wrapper .bx-prev:hover,
+        .bx-wrapper .bx-prev:focus {
+            background-position: center;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 0px;
+            background: url(images/if_next_308956_255_2.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .bx-wrapper .bx-next:hover,
+        .bx-wrapper .bx-next:focus {
+             background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="slider bxslider">
+            <div class="slider_content" style="background-image: url(images/fantasy-2925250_1920.jpg);"></div>
+            <div class="slider_content" style="background-image: url(images/elephant-1822636_1920.jpg)"></div>
+            <div class="slider_content" style="background-image: url(images/ballerina-2878011_1920.jpg);"></div>
+            <div class="slider_content" style="background-image: url(images/kingfisher-2363879_1920.jpg);"></div>
+        </div>
+        <div class="bannercaption">
+            <div class="bannercaption_text">
+                <h2>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.</h2>
+                <p>Sequi praesentium quidem tempora quod. Repellendus, delectus consectetur labore distinctio.</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('.slider').bxSlider({
+                mode: 'fade',
+                captions: true,
+                auto: true,
+                speed: 500,
+            });
+        });
+    </script>
+</body>
+
+</html>
